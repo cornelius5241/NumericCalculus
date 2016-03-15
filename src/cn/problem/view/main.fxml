@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="CENTER" hgap="10.0" layoutX="0.0" layoutY="0.0" minHeight="300.0" minWidth="300.0" prefHeight="450.0" prefWidth="450.0" styleClass="-fx-background-image:url(@imagine/background.JPG);" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="cn.problem.controller.MainController">
+  <children>
+    <Label text="Calcul Numeric 2015-2016" textAlignment="CENTER" textOverrun="ELLIPSIS" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+      <font>
+        <Font name="System Bold Italic" size="25.0" />
+      </font>
+    </Label>
+    <GridPane GridPane.columnIndex="0" GridPane.rowIndex="1">
+      <children>
+        <Button mnemonicParsing="false" onAction="#startHomework1onPush" text="Laborator - Tema 1" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+          <font>
+            <Font size="15.0" fx:id="x1" />
+          </font>
+        </Button>
+        <Button font="$x1" mnemonicParsing="false" onAction="#startHomework2onPush" text="Laborator - Tema 2" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+        <Button font="$x1" mnemonicParsing="false" onAction="#startHomework3onPush" text="Laborator - Tema 3" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+        <Button mnemonicParsing="false" onAction="#startHomework4onPush" text="Laborator - Tema 4" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+        <Button mnemonicParsing="false" onAction="#startHomework5onPush" text="Laborator - Tema 5" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+        <Button mnemonicParsing="false" onAction="#startHomework6onPush" text="Laborator - Tema 6" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+        <Button mnemonicParsing="false" onAction="#startHomework7onPush" text="Laborator - Tema 7" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+        <Button mnemonicParsing="false" onAction="#startHomework8onPush" text="Laborator - Tema 8" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="112.0" minHeight="10.0" prefHeight="93.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="293.0" minHeight="10.0" prefHeight="230.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+</GridPane>
