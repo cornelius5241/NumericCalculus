@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.text.Font?>
+
 <GridPane fx:id="mainGridPane" alignment="CENTER" hgap="10.0" layoutX="0.0" layoutY="0.0" minHeight="300.0" minWidth="300.0" prefHeight="504.0" prefWidth="574.0" styleClass="-fx-background-image:url(@imagine/background.JPG);" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="cn.problem.controller.ControllerHW3">
   <children>
     <Label prefHeight="26.999908447265625" text="Calcul Numeric 2015-2016" textAlignment="CENTER" textOverrun="ELLIPSIS" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
@@ -13,11 +16,11 @@
     </Label>
     <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
       <bottom>
-        <ScrollPane prefHeight="216.0" prefWidth="574.0">
+        <ScrollPane maxWidth="-1.0" minHeight="216.0" minWidth="574.0" prefHeight="216.0" prefWidth="574.0">
           <content>
-            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="559.0">
               <children>
-                <TextArea fx:id="outputTextArea" layoutX="0.0" layoutY="0.0" prefHeight="215.0" prefWidth="573.0" wrapText="true" />
+                <TextArea fx:id="outputTextArea" layoutX="0.0" layoutY="0.0" maxWidth="1500.0" minHeight="215.0" minWidth="1500.0" prefHeight="215.0" prefWidth="1500.0" wrapText="true" />
               </children>
             </AnchorPane>
           </content>
@@ -71,12 +74,7 @@
         </GridPane>
       </left>
       <right>
-        <Pane prefHeight="200.0" prefWidth="200.0">
-          <children>
-            <Button layoutX="72.0" layoutY="39.0" mnemonicParsing="false" onAction="#calculateDeterminantOnPush" text="Determinant" />
-            <Button layoutX="81.0" layoutY="150.0" mnemonicParsing="false" onAction="#verifyCorrectnessOnPush" text="Verificare" />
-          </children>
-        </Pane>
+        <Pane prefHeight="200.0" prefWidth="200.0" />
       </right>
       <top>
         <Label text="Laborator - Tema 3" BorderPane.alignment="TOP_CENTER">

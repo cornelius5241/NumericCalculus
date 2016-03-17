@@ -50,11 +50,11 @@ public class ControllerHW3 {
     }
 
     public void startGaussianOnPush(){
-        matrix=new double[][]{
-                {1.0,0.0,2.0},
-                {0.0,1.0,0.0},
-                {1.0,1.0,1.0}
-        };
+//        matrix=new double[][]{
+//                {1.0,0.0,2.0},
+//                {0.0,1.0,0.0},
+//                {1.0,1.0,1.0}
+//        };
         double matrix_cpy[][]=new double[matrix.length][matrix.length];
         for (int i = 0; i < matrix.length; i++) {
             System.arraycopy(matrix[i], 0, matrix_cpy[i], 0, matrix.length);
