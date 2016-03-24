@@ -155,7 +155,6 @@ public class SparseMatrix {
             if(node.getI()==column)
                 return node.getValue();
         }
-
         return 0;
     }
 
@@ -171,6 +170,7 @@ public class SparseMatrix {
             for (int column = 0; column < result.size; column++) {
                 //System.out.println("[Log "+System.currentTimeMillis()+"][HW4]Rare matrix - Multiplication.\n"+line+" and "+column);
                 double sum=0;
+
                 for (int i = 0; i < result.size; i++) {
                     sum+=A.getNodeValue(line,i)*B.getNodeValue(i,column);
                 }
@@ -192,12 +192,11 @@ public class SparseMatrix {
             x.add((double)i);
         }
 
-        for (int i = 0; i < size; i++)
+        for (int line = 0; line < size; line++)
         {
             double S = 0;
-            for (int j = 0; j < size; j++)
-            {
-                S += x.get(j) * A.getNodeValue(i,j);
+            for (Node n:A.matrix[line]) {
+                S+=x.get(n.getI())*n.getValue ();
             }
             result.add(S);
         }

@@ -68,7 +68,7 @@ public class ControllerHW4 {
         outputTextArea.setText("Rezultatul adunarii este: \n\n");
         //outputTextArea.appendText(aplusb.simpleToString ());
         outputTextArea.appendText("Rezultatul testarii este: \n\n");
-        outputTextArea.setText("Rezultatul testarii pt A*B  este: "+SparseMatrix.testMatrix(aplusb,A_plus_B)+" \n\n");
+        outputTextArea.setText("Rezultatul testarii pt A+B  este: "+SparseMatrix.testMatrix(aplusb,A_plus_B)+" \n\n");
 
     }
 
