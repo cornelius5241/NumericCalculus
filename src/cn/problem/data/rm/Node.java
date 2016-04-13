@@ -24,7 +24,7 @@ public class Node {
             this.i = i;
         }
 
-        Node(double value, int i){
+        public Node(double value, int i){
             this.value=value;
             this.i=i;
         }

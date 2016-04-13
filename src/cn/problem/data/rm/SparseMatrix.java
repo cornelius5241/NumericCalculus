@@ -24,6 +24,19 @@ public class SparseMatrix {
         return size;
     }
 
+    public SparseMatrix(){
+
+    }
+
+    public SparseMatrix(int n,int m){
+        this.size=n;
+        this.vector=new ArrayList<Double> (n);
+        this.matrix= (ArrayList<Node>[])new ArrayList[size];
+        for (int i = 0; i <size ; i++) {
+            matrix[i]=new ArrayList<> (m);
+        }
+    }
+
     public  void loadFromFile(File file) {
         System.out.println("[Log "+System.currentTimeMillis()+"][HW4]Rare matrix - load from file.\n"+file.toString ()+"\n");
 
@@ -219,5 +232,7 @@ public class SparseMatrix {
         }
         return true;
     }
+
+
 
 }

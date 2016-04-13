@@ -1,22 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.text.Font?>
-<GridPane fx:id="mainGridPane" alignment="CENTER" hgap="10.0" layoutX="0.0" layoutY="0.0" minHeight="300.0" minWidth="300.0" prefHeight="416.0" prefWidth="521.0" styleClass="-fx-background-image:url(@imagine/background.JPG);" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="cn.problem.controller.ControllerHW1">
+
+<GridPane fx:id="mainGridPane" alignment="CENTER" hgap="10.0" layoutX="0.0" layoutY="0.0" minHeight="300.0" minWidth="300.0" prefHeight="420.0" prefWidth="600.0" styleClass="-fx-background-image:url(@imagine/background.JPG);" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="cn.problem.controller.ControllerHW5">
   <children>
-    <Label prefHeight="26.999908447265625" text="Calcul Numeric 2015-2016" textAlignment="CENTER" textOverrun="ELLIPSIS" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+    <Label prefHeight="26.999908447265625" text="Calcul Numeric 2015-2016" textAlignment="CENTER" textOverrun="ELLIPSIS" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="TOP">
       <font>
         <Font name="System Bold Italic" size="20.0" />
       </font>
+      <GridPane.margin>
+        <Insets top="5.0" />
+      </GridPane.margin>
+    </Label>
+    <Label text="Laborator - Tema 5" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="BOTTOM">
+      <font>
+        <Font name="System Bold" size="17.0"/>
+      </font>
     </Label>
     <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+      <center>
+        <ScrollPane maxWidth="-1.0" minHeight="216.0" minWidth="401.0" prefHeight="296.0" prefWidth="401.0">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="414.0">
+              <children>
+                <TextArea fx:id="outputTextArea" layoutX="0.0" layoutY="0.0" maxWidth="1500.0" minHeight="215.0" minWidth="1500.0" prefHeight="215.0" prefWidth="1500.0" visible="true" wrapText="true" />
+              </children>
+            </AnchorPane>
+          </content>
+        </ScrollPane>
+      </center>
+      <left>
+        <Pane prefHeight="296.0" prefWidth="162.0">
+          <children>
+            <Label layoutX="105.0" layoutY="20.0" text="System 2" />
+            <Label layoutX="15.0" layoutY="20.0" text="System 1" />
+            <ProgressIndicator id="matrixAProgressIndicator" fx:id="system1ProgressIndicator" layoutX="23.0" layoutY="60.0" progress="0.0" />
+            <ProgressIndicator id="matrixBProgressIndicator" fx:id="system2ProgressIndicator" layoutX="115.0" layoutY="60.0" progress="0.0" />
+            <Label layoutX="105.0" layoutY="153.0" text="System 4" />
+            <Label layoutX="15.0" layoutY="153.0" text="System 3" />
+            <ProgressIndicator id="matrixAProgressIndicator" fx:id="system3ProgressIndicator" layoutX="23.0" layoutY="193.0" progress="0.0" />
+            <ProgressIndicator id="matrixBProgressIndicator" fx:id="system4ProgressIndicator" layoutX="113.0" layoutY="193.0" progress="0.0" />
+          </children>
+        </Pane>
+      </left>
       <top>
-        <Label text="Laborator - Tema 1" BorderPane.alignment="TOP_CENTER">
-          <font>
-            <Font name="System Bold" size="17.0" fx:id="x2" />
-          </font>
-        </Label>
+        <ToolBar>
+          <items>
+            <Button id="loadFilesButton" mnemonicParsing="false" onAction="#loadFilesOnPush" text="Load files" />
+            <Button mnemonicParsing="false" onAction="#checkMatrixOnPush" text="Check matrix" />
+            <Button mnemonicParsing="false" onAction="#approxSolOnPush" text="Aproximate solution" />
+            <Button mnemonicParsing="false" onAction="#checkSolutionOnPush" text="Check" textAlignment="CENTER" />
+          </items>
+        </ToolBar>
       </top>
     </BorderPane>
   </children>
@@ -24,7 +65,7 @@
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
   </columnConstraints>
   <rowConstraints>
-    <RowConstraints maxHeight="186.0" minHeight="10.0" prefHeight="162.0" vgrow="SOMETIMES" />
-    <RowConstraints maxHeight="365.0" minHeight="10.0" prefHeight="288.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="186.0" minHeight="10.0" prefHeight="72.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="365.0" minHeight="10.0" prefHeight="334.0" vgrow="SOMETIMES" />
   </rowConstraints>
 </GridPane>
