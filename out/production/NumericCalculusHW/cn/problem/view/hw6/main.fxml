@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="mainGridPane" alignment="CENTER" hgap="10.0" layoutX="0.0" layoutY="0.0" minHeight="300.0" minWidth="300.0" prefHeight="416.0" prefWidth="521.0" styleClass="-fx-background-image:url(@imagine/background.JPG);" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="cn.problem.controller.ControllerHW6">
+  <children>
+    <Label prefHeight="26.999908447265625" text="Laborator - Tema 1" textAlignment="CENTER" textOverrun="ELLIPSIS" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="0" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES">
+      <font>
+        <Font name="System Bold Italic" size="20.0" />
+      </font>
+      <GridPane.margin>
+        <Insets top="15.0" />
+      </GridPane.margin>
+    </Label>
+    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+      <top>
+        <Pane prefHeight="83.0" prefWidth="521.0">
+          <children>
+            <Button layoutX="432.0" layoutY="42.0" mnemonicParsing="false" onAction="#generateMatrixOnPush" text="Generare" />
+            <Label layoutX="14.0" layoutY="14.0" text="linii">
+              <font>
+                <Font size="15.0" fx:id="x1" />
+              </font>
+            </Label>
+            <Label font="$x1" layoutX="14.0" layoutY="40.0" text="coloane" />
+            <TextField fx:id="linesTextField" layoutX="77.0" layoutY="13.0" prefWidth="90.0" text="650" />
+            <TextField fx:id="columnsTextField" layoutX="77.0" layoutY="42.0" prefWidth="90.0" text="650" />
+            <TextField fx:id="epsilonTextField" layoutX="320.0" layoutY="13.0" prefWidth="101.0" text="15" />
+            <Label font="$x1" layoutX="247.0" layoutY="14.0" text="Precizie" />
+            <Button layoutX="285.0" layoutY="43.0" mnemonicParsing="false" onAction="#loadFromFileOnPush" text="Fisier" />
+          </children>
+        </Pane>
+      </top>
+    </BorderPane>
+  </children>
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="186.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="373.0" minHeight="10.0" prefHeight="347.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+</GridPane>

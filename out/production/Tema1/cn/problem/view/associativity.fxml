@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:id="secondProblemGridPane" alignment="CENTER" hgap="10.0" layoutX="0.0" layoutY="0.0" minHeight="300.0" minWidth="550.0" prefHeight="450.0" prefWidth="550.0" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="cn.problem.controller.Controller">
+  <children>
+    <ScrollPane fx:id="imagineScrollPane" fitToHeight="true" fitToWidth="true" pannable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+      <content>
+        <ImageView pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@imagine/tema1problema2.PNG" />
+          </image>
+        </ImageView>
+      </content>
+      <GridPane.margin>
+        <Insets bottom="75.0" />
+      </GridPane.margin>
+    </ScrollPane>
+    <Button mnemonicParsing="false" onAction="#startSecondProblemSum" text="Start" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+      <font>
+        <Font name="System Bold" size="14.0" fx:id="x3" />
+      </font>
+    </Button>
+    <TextField id="secondProblemResultTextField" fx:id="secondProblemMulResultTextField" alignment="CENTER" editable="false" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+      <GridPane.margin>
+        <Insets left="50.0" fx:id="x1" />
+      </GridPane.margin>
+    </TextField>
+    <Label text="Rezultat inmultire" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+      <font>
+        <Font size="14.0" fx:id="x2" />
+      </font>
+      <GridPane.margin>
+        <Insets left="10.0" />
+      </GridPane.margin>
+    </Label>
+    <Label font="$x2" text="Rezultat adunare" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="BOTTOM">
+      <GridPane.margin>
+        <Insets bottom="30.0" left="10.0" />
+      </GridPane.margin>
+    </Label>
+    <TextField id="secondProblemResultTextField" fx:id="secondProblemSumResultTextField" alignment="CENTER" editable="false" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="0" GridPane.valignment="BOTTOM" GridPane.vgrow="SOMETIMES">
+      <GridPane.margin>
+        <Insets bottom="30.0" left="50.0" />
+      </GridPane.margin>
+    </TextField>
+    <Button font="$x3" mnemonicParsing="false" onAction="#startSecondProblemMultiplication" text="Start" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+    <TextField fx:id="multiplicationArg1" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" promptText="argument 1" text="100.0" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+      <GridPane.margin>
+        <Insets left="100.0" top="50.0" />
+      </GridPane.margin>
+    </TextField>
+    <TextField fx:id="multiplicationArg2" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" promptText="argument 2" text="0.2" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+      <GridPane.margin>
+        <Insets top="50.0" />
+      </GridPane.margin>
+    </TextField>
+    <TextField fx:id="multiplicationArg3" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" promptText="argument 3" text="0.2" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+      <GridPane.margin>
+        <Insets right="100.0" top="50.0" />
+      </GridPane.margin>
+    </TextField>
+  </children>
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+</GridPane>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<GridPane fx:id="mainGridPane" alignment="CENTER" hgap="10.0" layoutX="0.0" layoutY="0.0" minHeight="300.0" minWidth="550.0" prefHeight="601.0" prefWidth="755.0" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="cn.problem.controller.ControllerHW2">
+  <children>
+    <ScrollPane fx:id="imagineScrollPane" fitToHeight="false" fitToWidth="false" pannable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+      <content>
+        <ImageView fitHeight="113.0" fitWidth="534.9778597785978" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../imagine/tema2problema3.PNG" />
+          </image>
+        </ImageView>
+      </content>
+    </ScrollPane>
+    <ScrollPane prefHeight="142.0" prefWidth="550.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+          <children>
+            <TextArea fx:id="vectorOutputTextArea" layoutX="21.0" layoutY="13.0" maxHeight="300.0" maxWidth="2200.0" minHeight="300.0" minWidth="2200.0" prefHeight="300.0" prefWidth="2200.0" wrapText="true" />
+          </children>
+        </AnchorPane>
+      </content>
+    </ScrollPane>
+    <GridPane GridPane.columnIndex="0" GridPane.rowIndex="1">
+      <children>
+        <Label text="Input" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+          <font>
+            <Font name="System Bold" size="15.0" />
+          </font>
+          <GridPane.margin>
+            <Insets left="25.0" fx:id="x1" />
+          </GridPane.margin>
+        </Label>
+        <TextField fx:id="systemPrecisionTextField" alignment="CENTER" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" promptText="dimensiunea sistemului" text="10" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+          <GridPane.margin>
+            <Insets right="25.0" />
+          </GridPane.margin>
+        </TextField>
+        <TextField fx:id="systemDimensionTextField" alignment="CENTER" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" promptText="dimensiunea sistemului" text="10" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.margin="$x1" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+        <Label text="Dimensiune sistem" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.margin="$x1" GridPane.rowIndex="0" GridPane.valignment="TOP" />
+        <Label text="Precizie" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="0" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES">
+          <GridPane.margin>
+            <Insets right="85.0" />
+          </GridPane.margin>
+        </Label>
+        <Button mnemonicParsing="false" onAction="#calculateLiniarSystemOnPush" text="Calculeaza" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+          <font>
+            <Font size="14.0" />
+          </font>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#randomOnPushButton" text="Random" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+        <Button mnemonicParsing="false" onAction="#fromFileOnPushButton" text="From file..." GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="315.0" minHeight="10.0" prefHeight="111.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="316.0" minHeight="10.0" prefHeight="159.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="316.0" minHeight="10.0" prefHeight="160.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+</GridPane>

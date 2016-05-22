@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 public class LiniarSystem {
 
-    private static double precision=Math.pow (10,-9);
+    private static double precision=Math.pow (10,-8);
 
     public static boolean testFirstDiag(SparseMatrix A){
         System.out.println("[Log "+System.currentTimeMillis()+"][HW5]LiniarSystem - test diagonal elements to be not null.\n");
@@ -32,11 +32,11 @@ public class LiniarSystem {
         ArrayList<Double> D = diag (A);
         int n=A.getSize ();
         ArrayList<Double> x=new ArrayList<>(n);
-        ArrayList<Double> x_c=new ArrayList<>(n);
-        ArrayList<Double> x_p=new ArrayList<>(n);
+        //ArrayList<Double> x_c=new ArrayList<>(n);
+        //ArrayList<Double> x_p=new ArrayList<>(n);
         for (int i = 0; i < n; i++) {
-            x_c.add(i,0.0);
-            x_p.add(i,0.0);
+            //x_c.add(i,0.0);
+            //x_p.add(i,0.0);
             x.add (i,0.0);
         }
 
@@ -47,24 +47,27 @@ public class LiniarSystem {
             //for (int i = 0; i < n; i++) {
             //    x_p.set(i,x_c.get (i));
             //}
-
+            delta=0;
             for (int i = 0; i <n ; i++) {
 
                 double left_sum=0;
 
+                //matricea inferioara
                 for (Node node:L.getMatrix ()[i]) {
                     //left_sum+=x_c.get(node.getI ())*node.getValue();
                     left_sum+=x.get (node.getI ())*node.getValue ();
                 }
 
                 double right_sum=0;
+                //matricea superioara
                 for (Node node:U.getMatrix ()[i]) {
                     //right_sum+=x_p.get (node.getI ())*node.getValue ();
-                    right_sum+=x.get (node.getI ())*node.getValue ();
+                    right_sum+=x.get(node.getI ())*node.getValue ();
                 }
 
                 //double value = (-0.2)*x_p.get(i)+1.2*(A.getVector().get(i)-left_sum-right_sum )/D.get(i);
                 double value = (-0.2)*x.get(i)+1.2*(A.getVector().get(i)-left_sum-right_sum )/D.get(i);
+
                 delta+= Math.abs (value-x.get (i) );
                 //x_c.set (i,value);
 
@@ -75,7 +78,7 @@ public class LiniarSystem {
 
             k++;
 
-        }while(delta>=precision && k<=kmax && delta<= Math.pow (10,8));
+        }while(delta>=precision && k<=kmax && delta<= Math.pow(10,8));
 
         if(delta<precision) {
             System.out.println("[Log "+System.currentTimeMillis()+"][HW5]LiniarSystem - found approximated solution.\n");

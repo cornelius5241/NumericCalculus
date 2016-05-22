@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<GridPane fx:id="mainGridPane" alignment="CENTER" hgap="10.0" layoutX="0.0" layoutY="0.0" minHeight="300.0" minWidth="300.0" prefHeight="416.0" prefWidth="521.0" styleClass="-fx-background-image:url(@imagine/background.JPG);" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="cn.problem.controller.ControllerHW1">
+  <children>
+    <Label prefHeight="26.999908447265625" text="Calcul Numeric 2015-2016" textAlignment="CENTER" textOverrun="ELLIPSIS" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+      <font>
+        <Font name="System Bold Italic" size="20.0" />
+      </font>
+    </Label>
+    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+      <top>
+        <Label text="Laborator - Tema 1" BorderPane.alignment="TOP_CENTER">
+          <font>
+            <Font name="System Bold" size="17.0" fx:id="x2" />
+          </font>
+        </Label>
+      </top>
+    </BorderPane>
+  </children>
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="186.0" minHeight="10.0" prefHeight="162.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="365.0" minHeight="10.0" prefHeight="288.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+</GridPane>

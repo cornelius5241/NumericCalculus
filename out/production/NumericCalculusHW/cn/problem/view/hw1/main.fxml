@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<GridPane fx:id="mainGridPane" alignment="CENTER" hgap="10.0" layoutX="0.0" layoutY="0.0" minHeight="300.0" minWidth="300.0" prefHeight="416.0" prefWidth="521.0" styleClass="-fx-background-image:url(@imagine/background.JPG);" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="cn.problem.controller.ControllerHW1">
+  <children>
+    <Label prefHeight="26.999908447265625" text="Calcul Numeric 2015-2016" textAlignment="CENTER" textOverrun="ELLIPSIS" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+      <font>
+        <Font name="System Bold Italic" size="20.0" />
+      </font>
+    </Label>
+    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+      <center>
+        <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+          <children>
+            <Button id="associativityButton" fx:id="associativityButton" layoutX="188.0" layoutY="73.0" mnemonicParsing="false" onAction="#associativityButtonOnPush" text="Asociativitate + *" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+              <font>
+                <Font name="System Bold" size="15.0" fx:id="x1" />
+              </font>
+            </Button>
+            <Button fx:id="precisionButton" font="$x1" layoutX="197.0" layoutY="35.0" mnemonicParsing="false" onAction="#precisionButtonOnPush" text="Calcul Precizie" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" />
+            <Button id="fileMatrixButton" fx:id="fileMatrixButton" font="$x1" layoutX="173.0" layoutY="178.0" mnemonicParsing="false" onAction="#fileMatrixButtonOnPush" prefHeight="51.0" prefWidth="175.0" text="Creare matrici/vectori" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true" />
+            <Button id="tanApproximationButton" fx:id="tanApproximationButton" font="$x1" layoutX="169.0" layoutY="108.0" mnemonicParsing="false" onAction="#tanApproximationButtonOnPush" prefHeight="61.0" prefWidth="186.0" text="Aproximarea tangentei" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true" />
+          </children>
+        </Pane>
+      </center>
+      <top>
+        <Label text="Laborator - Tema 1" BorderPane.alignment="TOP_CENTER">
+          <font>
+            <Font name="System Bold" size="17.0" fx:id="x2" />
+          </font>
+        </Label>
+      </top>
+    </BorderPane>
+  </children>
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="186.0" minHeight="10.0" prefHeight="162.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="365.0" minHeight="10.0" prefHeight="288.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+</GridPane>

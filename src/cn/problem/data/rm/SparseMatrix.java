@@ -2,6 +2,7 @@ package cn.problem.data.rm;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * Created by Cornelius on 22.03.2016.
@@ -75,6 +76,53 @@ public class SparseMatrix {
         } catch (IOException e) {
 
            e.printStackTrace ( );
+        }
+
+        try {
+            br.close();
+        } catch (IOException e) {
+            e.printStackTrace ( );
+        }
+    }
+
+    public  void loadFromFileOnlyMatrix(File file) {
+        System.out.println("[Log "+System.currentTimeMillis()+"][HW4]Rare matrix - load from file.\n"+file.toString ()+"\n");
+
+        FileInputStream fstream = null;
+        try {
+            fstream = new FileInputStream (file);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace ( );
+        }
+        assert fstream != null;
+        BufferedReader br = new BufferedReader(new InputStreamReader (fstream));
+        String strLine;
+        try {
+
+            strLine=br.readLine();
+            size=Integer.parseInt(strLine);
+            strLine=br.readLine();
+            //vector=new ArrayList<>(size);
+
+            //for (int i = 0; i < size; i++) {
+            //    strLine=br.readLine();
+            //    vector.add (Double.parseDouble (strLine));
+            //}
+
+            strLine=br.readLine();
+            matrix= (ArrayList<Node>[])new ArrayList[size];
+            for (int i = 0; i <size ; i++) {
+                matrix[i]=new ArrayList<> (10);
+            }
+
+            while ((strLine = br.readLine()) != null &&!(strLine==null))   {
+                //System.out.println("[Log "+System.currentTimeMillis()+"][HW4]Rare matrix - load from file.\n"+strLine+"\n");
+                String elements[]=strLine.split (", ");
+                matrix[Integer.parseInt(elements[1])].add (new Node (Double.parseDouble(elements[0]),Integer.parseInt(elements[2])));
+            }
+        } catch (IOException e) {
+
+            e.printStackTrace ( );
         }
 
         try {
@@ -233,6 +281,34 @@ public class SparseMatrix {
         return true;
     }
 
+    public void generateRandomMatrix(int n,int procent_non_null){
 
+        this.size=n;
+        int MAX = n;
+        int MIN = -n;
+
+        Random r = new Random();
+        Random rn = new Random();
+
+        int elements=((int)(size * procent_non_null/100));
+        matrix= (ArrayList<Node>[])new ArrayList[size];
+        for (int i = 0; i <this.size ; i++) {
+            matrix[i] = new ArrayList<> (elements*2);
+        }
+
+        for (int i = 0; i <this.size ; i++) {
+            for (int j = 0; j <elements ; j++) {
+                double randomValue = MIN + (MAX - MIN) * r.nextDouble();
+                int random_i = (rn.nextInt() % this.size);
+                if(random_i<0)random_i=-random_i;
+                Node node = new Node (randomValue,random_i);
+                matrix[i].add(node);
+
+                Node node_sim=new Node (randomValue,i);
+                matrix[random_i].add (node_sim);
+            }
+        }
+
+    }
 
 }

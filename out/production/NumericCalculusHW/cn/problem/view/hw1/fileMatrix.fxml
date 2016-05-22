@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane fx:id="fourthProblemBorderPane" prefHeight="600.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="cn.problem.controller.ControllerHW1">
+  <center>
+    <GridPane>
+      <children>
+        <Label text="Marime Matrice/Vector" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="TOP">
+          <font>
+            <Font name="System Bold" size="13.0" />
+          </font>
+          <GridPane.margin>
+            <Insets top="10.0" />
+          </GridPane.margin>
+        </Label>
+        <TextField fx:id="columnsTextField" alignment="CENTER" maxWidth="60.0" minWidth="60.0" prefWidth="60.0" text="coloane" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+          <GridPane.margin>
+            <Insets right="50.0" />
+          </GridPane.margin>
+        </TextField>
+        <TextField fx:id="rowsTextField" alignment="CENTER" maxWidth="60.0" minWidth="60.0" prefWidth="60.0" text="linii" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+          <GridPane.margin>
+            <Insets left="25.0" />
+          </GridPane.margin>
+        </TextField>
+        <ScrollPane id="ScrollPane" prefViewportHeight="231.0" prefViewportWidth="408.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+          <content>
+            <TextArea fx:id="resultTextArea" pickOnBounds="true" prefHeight="1000.0" prefWidth="2000.0" wrapText="false" />
+          </content>
+        </ScrollPane>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </center>
+  <left>
+    <ToolBar orientation="VERTICAL" prefHeight="462.0" prefWidth="80.0">
+      <items>
+        <Button id="randomMatr" fx:id="randomMatrixButton" alignment="CENTER" maxHeight="78.0" maxWidth="75.0" mnemonicParsing="false" onAction="#createRandomMatrix" prefHeight="55.0" prefWidth="66.0" text="Creeaza random" textAlignment="CENTER" wrapText="true" />
+        <Button id="saveButton" fx:id="saveMatrixButton" maxWidth="70.0" mnemonicParsing="false" onAction="#saveMatrixToFile" prefHeight="45.0" prefWidth="70.0" text="Salveaza in fisier" textAlignment="CENTER" wrapText="true" />
+        <Button fx:id="loadMatrixButton" maxWidth="70.00009999999747" mnemonicParsing="false" onAction="#loadMatrixFromFile" prefHeight="55.000099999997474" prefWidth="70.00009999999747" text="Adauga din fisier" textAlignment="CENTER" wrapText="true" />
+      </items>
+      <BorderPane.margin>
+        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+      </BorderPane.margin>
+    </ToolBar>
+  </left>
+  <padding>
+    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+  </padding>
+  <top>
+    <ScrollPane fx:id="imagineScrollPane" fitToHeight="true" fitToWidth="true" pannable="false" prefHeight="128.0" prefWidth="500.0" vbarPolicy="AS_NEEDED">
+      <content>
+        <ImageView fitHeight="128.0" fitWidth="796.3186069909622" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../imagine/tema1problema4.PNG" />
+          </image>
+        </ImageView>
+      </content>
+    </ScrollPane>
+  </top>
+</BorderPane>
